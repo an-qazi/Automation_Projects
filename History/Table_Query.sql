@@ -37,7 +37,8 @@ Durations as (
     Select
     station,
     DATEDIFF(minute, login_dt, logout_dt) as minutes_here -- find difference between login and logout from Paired CTE
-    From Paired)
+    From Paired
+    Where DATEDIFF(minute, login_dt, logout_dt) > 0) -- filter out 0 minute entries
 
 Select
 station as Station,
