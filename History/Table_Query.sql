@@ -1,3 +1,5 @@
+-- Connected to table via Ignition expression
+-- {Root Container.History.Table.data}
 With LoginCTE as (
 Select
     ASSET   as station,
